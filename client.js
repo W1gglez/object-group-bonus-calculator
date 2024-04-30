@@ -66,18 +66,37 @@ function calculateIndividualEmployeeBonus(employee) {
     totalBonus: totalBonus,
   };
 
-  //Check reviewRating and calculate bonus
-  if (employee.reviewRating <= 2) {
-    // console.log('This employee does not get a bonus.');
-  } else if (employee.reviewRating === 3) {
-    bonusPercentage = 0.04;
-    // console.log('This employee gets a base bonus of 4%');
-  } else if (employee.reviewRating === 4) {
-    bonusPercentage = 0.06;
-    // console.log('This employee gets a base bonus of 6%');
-  } else if (employee.reviewRating === 5) {
-    bonusPercentage = 0.1;
-    // console.log('This employee gets a base bonus of 10%');
+  // //Check reviewRating and calculate bonus
+  // if (employee.reviewRating <= 2) {
+  //   // console.log('This employee does not get a bonus.');
+  // } else if (employee.reviewRating === 3) {
+  //   bonusPercentage = 0.04;
+  //   // console.log('This employee gets a base bonus of 4%');
+  // } else if (employee.reviewRating === 4) {
+  //   bonusPercentage = 0.06;
+  //   // console.log('This employee gets a base bonus of 6%');
+  // } else if (employee.reviewRating === 5) {
+  //   bonusPercentage = 0.1;
+  //   // console.log('This employee gets a base bonus of 10%');
+  // }
+  switch (employee.reviewRating) {
+    case 0:
+      break;
+    case 1:
+      break;
+    case 2:
+      break;
+    case 3:
+      bonusPercentage = 0.04;
+      break;
+    case 4:
+      bonusPercentage = 0.06;
+      break;
+    case 5:
+      bonusPercentage = 0.1;
+      break;
+    default:
+      break;
   }
 
   //Checking length of employementand calculate additional bonus
